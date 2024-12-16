@@ -14,9 +14,9 @@ on:
     types: [started]
 
 env:
-  FIRMWARE_LINK: https://download.c.realme.com/flash/Rollbackpack/realme_narzo%2020/RMX2191_11_OTA_0190_all_nksxIPHHdisT.ozip #edit link here...
-  FIRMWARE_NAME: RMX2191_11_OTA_0190_all_nksxIPHHdisT.ozip  #edit file name here, you can find the name of file from link itself...
-  FINAL_ZIP_NAME: THE_NAME_OF_ZIP_YOU_WANT.zip #This will be the name of final zip which will be uploaded. You can leave it unchanged.
+  FIRMWARE_LINK: http://otafsg1.realmemobile.com/patch/amazone2/GLO/RMX1831EX/RMX1831EX_11.C.20_0200_202007222131/RMX1831EX_11_OTA_0200_all_QrdLEyEpDpi6_8b0ef6b02d6f675.ozip #edit link here...
+  FIRMWARE_NAME: RMX1831EX_11_OTA_0200_all_QrdLEyEpDpi6_8b0ef6b02d6f675.ozip  #edit file name here, you can find the name of file from link itself...
+  FINAL_ZIP_NAME: RMX1831EX_11_OTA_0200_all_QrdLEyEpDpi6_8b0ef6b02d6f675.zip #This will be the name of final zip which will be uploaded. You can leave it unchanged.
   TZ: Asia/Kolkata
 
 jobs:
@@ -52,7 +52,7 @@ jobs:
          continue-on-error: true
          run: |
              cd out
-             sudo zip -r $FINAL_ZIP_NAME * #Don't edit it. Don't edit it and Don't edit this line.
+             sudo zip -r RMX1831EX_11_OTA_0200_all_QrdLEyEpDpi6_8b0ef6b02d6f675.zip out #Don't edit it. Don't edit it and Don't edit this line.
 
 
        - name: Upload Decrypted zip if AES keys not found.
